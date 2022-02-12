@@ -1,0 +1,140 @@
+<!-- <app-logo ></app-logo > -->
+<div class="formContainer">
+  <h4>Register Details for SignUp</h4>
+  <form>
+    <div class="form-group">
+      <label for="usr">*Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="usr"
+        placeholder="Enter Name"
+        name="userName"
+        minlength="3"
+        required
+      />
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field requires minimum 3 characters.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">*Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        placeholder="Enter password"
+        name="password"
+        minlength="6"
+        required
+      />
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field requires minimum 6 characters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cpwd">*Cofirm Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="cpwd"
+        placeholder="Confirm password"
+        name="confirmPassword"
+        minlength="6"
+        required
+      />
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field requires minimum 6 characters.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> password does not match.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">*Email:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        placeholder="Enter Email"
+        name="email"
+        minlength="6"
+        required
+      />
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field requires minimum 6 characters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dob">*DOB:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dob"
+        placeholder="Enter DOB"
+        name="dob"
+        required
+      />
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">*Telephone no:</label>
+      <input
+        type="number"
+        class="form-control lastBtn"
+        id="phone"
+        placeholder="Enter Telephone"
+        name="telephone"
+        min="10"
+        required
+      />
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field requires minimum 10 digits.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="role">*Access Level:</label>
+      <select id="role" class="form-control lastBtn" name="role" required>
+        <option value="1">full access</option>
+        <option value="2">read only</option>
+      </select>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> This field is required.
+      </div>
+    </div>
+    <div class="alert alert-danger">
+      <strong>Error!</strong> {{ errorMessage }}
+    </div>
+    <div class="alert alert-success">
+      <strong>Success!</strong> Registration successful !!
+      <a routerLink="/auth/login">Back to Login</a>
+    </div>
+    <div class="form-group clearfix">
+      <button type="button" class="btn btn-secondary clearBtn">Clear</button>
+
+      <button type="submit" class="btn btn-primary submitBtn">Submit</button>
+      <div class="submitBtn">
+        <div class="spinner-border"></div>
+      </div>
+    </div>
+  </form>
+  <a routerLink="/auth/login">Back to Login</a>
+</div>
